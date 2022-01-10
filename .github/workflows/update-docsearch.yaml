@@ -5,16 +5,16 @@ on:
   push:
     paths:
       # Re-run the action if we change the workflow
-      - '.github/workflows/update-docsearch.yaml'
+      - ".github/workflows/update-docsearch.yaml"
 
       # This needs to match the location where
       # you store your documentation code and content
-      - 'docs/**'
+      - "docs/**"
     branches:
       - main
   schedule:
     # Runs "at minute 55 past every hour" (see https://crontab.guru)
-    - cron: '55 * * * *'
+    - cron: "*/5 * * * *"
 jobs:
   update-docsearch:
     name: Update DocSearch
