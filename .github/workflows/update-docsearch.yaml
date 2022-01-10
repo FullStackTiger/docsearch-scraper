@@ -20,7 +20,7 @@ jobs:
       # Check out latest code
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Update DocSearch
+      - name: UpdateDocSearch
 				env:
 		      ALGOLIA_APP_ID: ${{ secrets.DocSearchAppId }}
 		      ALGOLIA_API_KEY: ${{ secrets.DocSearchApiKey }}
