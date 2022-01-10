@@ -20,9 +20,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Update DocSearch
-				env:
-		      ALGOLIA_APP_ID: ${{ secrets.DocSearchAppId }}
-		      ALGOLIA_API_KEY: ${{ secrets.DocSearchApiKey }}
+        env:
+          ALGOLIA_APP_ID: ${{ secrets.DocSearchAppId }}
+          ALGOLIA_API_KEY: ${{ secrets.DocSearchApiKey }}
         run: |
           docker run \
             --env ALGOLIA_APP_ID=${ALGOLIA_APP_ID} \
