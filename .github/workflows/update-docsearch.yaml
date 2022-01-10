@@ -20,6 +20,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Update DocSearch
+        # If your docs are in the root, omit the line below
+        working-directory: docs
         env:
           ALGOLIA_APP_ID: ${{ secrets.DocSearchAppId }}
           ALGOLIA_API_KEY: ${{ secrets.DocSearchApiKey }}
