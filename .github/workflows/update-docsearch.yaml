@@ -24,6 +24,7 @@ jobs:
 				env:
 		      ALGOLIA_APP_ID: ${{ secrets.DocSearchAppId }}
 		      ALGOLIA_API_KEY: ${{ secrets.DocSearchApiKey }}
+        run: echo "Hello $ALGOLIA_APP_ID $ALGOLIA_API_KEY, !!!"
         run: |
           docker run \
             --env ALGOLIA_APP_ID=${ALGOLIA_APP_ID} \
